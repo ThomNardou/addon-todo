@@ -3,8 +3,7 @@ name: deploy and build addon todo
 on:
   push:
     tags:
-      - '*'
-    branches: [ "main"]
+      - 'v*.*.*'
   
 jobs: 
   build:
