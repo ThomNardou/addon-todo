@@ -1,0 +1,24 @@
+name: deploy and build addon todo
+
+on:
+  push:
+    branches: [ "main"]
+  
+  jobs: 
+    build:
+      runs-on: ubuntu-latest
+      steps: 
+        - uses: actions/checkout@v2
+        - name: Set up Node.js
+          uses: actions/setup-node@v2
+          with:
+            node-version: '22.x'
+        - name: Install dependencies
+          run: npm install
+        - name: install lftp
+          run: sudo apt-get install lftp
+        - name: Run package
+          env:
+            AMO_JWT_ISSUER: ${{ secrets.AMO_JWT_ISSUER }}
+            AMO_JWT_SECRET: ${{ secrets.AMO_JWT_SECRET }}
+          run: npm run pack:ff
