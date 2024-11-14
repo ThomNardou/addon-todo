@@ -1,5 +1,14 @@
 {
   "dependencies": {
     "web-ext": "^8.3.0"
+  },
+  "scripts": {
+    "dev:ff": "npm run ff",
+    "dev:edge": "npm run edge",
+    "dev:chrome": "npm run chrome",
+    "ff": "web-ext run --target=firefox-desktop",
+    "edge": "web-ext run --target=edge-desktop",
+    "chrome": "web-ext run --target=chromium",
+    "pack:ff": "web-ext sign --api-key=$AMO_JWT_ISSUER --api-secret=$AMO_JWT_SECRET --channel=unlisted"
   }
 }
