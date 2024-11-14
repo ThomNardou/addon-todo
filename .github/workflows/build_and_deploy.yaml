@@ -2,6 +2,8 @@ name: deploy and build addon todo
 
 on:
   push:
+    tags:
+      - '*'
     branches: [ "main"]
   
 jobs: 
