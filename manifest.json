@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Todo-Addon",
-    "version": "0.16.0",
+    "version": "0.17.0",
     "description": "This is a description",
     "permissions": ["identity"],
     "host_permissions": [],
@@ -22,7 +22,7 @@
         "gecko": {
             "id": "{dd608bbd-737f-49dc-a10c-9dc4e60fcdc2}",
             "strict_min_version": "109.0",
-            "update_url": "./versions.json"
+            "update_url": "https://addonrepositories.azurewebsites.net/addon_todo/tnu/versions.json"
         }
     },
     "author": "Thomas Nardou"
