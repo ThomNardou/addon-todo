@@ -23,7 +23,14 @@ jobs:
           AMO_JWT_ISSUER: ${{ secrets.AMO_JWT_ISSUER }}
           AMO_JWT_SECRET: ${{ secrets.AMO_JWT_SECRET }}
         run: npm run pack:ff
-      - name: Deploy
+      - name: Deploy versions file
+        env: 
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          lftp -e "set ftp:ssl-allow no; mirror -R -I versions.json /site/wwwroot/addon_todo/tnu; quit" -u $FTP_USER,$FTP_PASSWORD ftps://waws-prod-zrh-007.ftp.azurewebsites.windows.net/site/wwwroot
+      - name: Deploy addon
         env: 
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_USER: ${{ secrets.FTP_USER }}

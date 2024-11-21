@@ -1,0 +1,16 @@
+{
+    "addons": {
+        "{dd608bbd-737f-49dc-a10c-9dc4e60fcdc2}": {
+            "updates": [
+                {
+                    "version": "0.14.0",
+                    "update_link": "https://addonrepositories.azurewebsites.net/addon_todo/tnu/todo_addon-0.14.0.xpi"
+                },
+                {
+                    "version": "0.15.0",
+                    "update_link": "https://addonrepositories.azurewebsites.net/addon_todo/tnu/todo_addon-0.15.0.xpi"
+                }
+            ]
+        }
+    }
+}
