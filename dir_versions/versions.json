@@ -9,6 +9,10 @@
                 {
                     "version": "0.15.0",
                     "update_link": "https://addonrepositories.azurewebsites.net/addon_todo/tnu/todo_addon-0.15.0.xpi"
+                },
+                {
+                    "version": "0.16.0",
+                    "update_link": "https://addonrepositories.azurewebsites.net/addon_todo/tnu/todo_addon-0.15.0.xpi"
                 }
             ]
         }
